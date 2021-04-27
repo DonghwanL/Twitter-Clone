@@ -29,7 +29,7 @@ const AppLayout = ({ children }) => {
           <Link href="/signup"><a>회원가입</a></Link>
         </Menu.Item>
       </Menu>
-      
+
       <Row gutter={8}>
         <Col xs={24} md={6}>
           { isLoggedin ? <UserProfile setIsLoggedIn={setIsLoggedin} /> : <LoginForm setIsLoggedIn={setIsLoggedin} /> }
@@ -38,7 +38,7 @@ const AppLayout = ({ children }) => {
           {children}
         </Col>
         <Col xs={24} md={6}>
-          <a href="https://www.naver.com" target="_blank" rel="noreferrrer noopener">Naver</a>
+          <a href="https://www.naver.com" target="_blank" rel="noreferrrer noopener">Made by Hwan</a>
         </Col>
       </Row>
     </div>
