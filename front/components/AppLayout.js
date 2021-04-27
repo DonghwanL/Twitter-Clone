@@ -29,6 +29,7 @@ const AppLayout = ({ children }) => {
           <Link href="/signup"><a>회원가입</a></Link>
         </Menu.Item>
       </Menu>
+      
       <Row gutter={8}>
         <Col xs={24} md={6}>
           { isLoggedin ? <UserProfile setIsLoggedIn={setIsLoggedin} /> : <LoginForm setIsLoggedIn={setIsLoggedin} /> }
