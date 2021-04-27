@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import propTypes from 'prop-types';
 import Link from 'next/link';
 import { Menu, Input, Row, Col } from 'antd';
@@ -11,7 +12,7 @@ const SearchInput = styled(Input.Search)`
 `;
 
 const AppLayout = ({ children }) => {
-  const [isLoggedin, setIsLoggedin] = useState(false);
+  const isLoggedin = useSelector((state) => state.user.isLoggedin);
 
   return (
     <div>
@@ -32,7 +33,7 @@ const AppLayout = ({ children }) => {
 
       <Row gutter={8}>
         <Col xs={24} md={6}>
-          { isLoggedin ? <UserProfile setIsLoggedIn={setIsLoggedin} /> : <LoginForm setIsLoggedIn={setIsLoggedin} /> }
+          { isLoggedin ? <UserProfile /> : <LoginForm /> }
         </Col>
         <Col xs={24} md={12}>
           {children}
