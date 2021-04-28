@@ -6,5 +6,6 @@ export default (inintialValue = null) => {
   const handler = useCallback((e) => {
     setValue(e.target.value);
   }, []);
+  
   return [value, handler];
 }

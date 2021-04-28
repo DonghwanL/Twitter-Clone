@@ -35,9 +35,11 @@ export const addPost = {
 }
 
 const dummyPost = {
+  id: 2,
+  content: '테스트 글 입니다',
   User: {
-    id: 2,
-    nickname: 'test3',
+    id: 1,
+    nickname: 'hwan',
   },
   Images: [],
   Comments: [],
