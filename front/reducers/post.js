@@ -5,7 +5,7 @@ export const initialState = {
       id: 1,
       nickname: 'test',
     },
-    content: '첫 번째 게시글',
+    content: '첫 번째 게시글 #해시태그 #냥냥이',
     Images: [{
       src: 'https://i.pinimg.com/564x/c3/a0/22/c3a0224bf4d1eb00dca790910ccc620d.jpg'
     }, {

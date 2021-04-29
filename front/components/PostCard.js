@@ -4,8 +4,9 @@ import PropTypes from 'prop-types';
 import { RetweetOutlined, HeartOutlined, MessageOutlined, EllipsisOutlined, HeartTwoTone } from '@ant-design/icons';
 import { useSelector } from 'react-redux';
 import Avatar from 'antd/lib/avatar/avatar';
-import PostImages from '../components/PostImages';
-import CommentForm from '../components/CommentForm';
+import PostImages from './PostImages';
+import CommentForm from './CommentForm';
+import PostCardContent from './PostCardContent';
 
 const PostCard = ({ post }) => {
   const id = useSelector((state) => state.user.me?.id);
@@ -49,7 +50,7 @@ const PostCard = ({ post }) => {
         <Card.Meta 
           avatar={<Avatar>{post.User.nickname[0]}</Avatar>}
           title={post.User.nickname}
-          description={post.content}
+          description={<PostCardContent postData={post.content} />}
         />
         <Button></Button>
       </Card>
