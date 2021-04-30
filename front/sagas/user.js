@@ -15,7 +15,7 @@ function* logIn(action) {
     // const result = yield call(logInAPI, action.data)
     yield delay(1000);
     yield put({
-      type:LOG_IN_SUCCESS,
+      type: LOG_IN_SUCCESS,
       data: action.data,
     });
   } catch (error) {
