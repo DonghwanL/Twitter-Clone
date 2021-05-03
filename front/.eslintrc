@@ -1,5 +1,5 @@
 {
-  "parser": "babel-eslint", // 최신 문법도 에러를 발생시키지 않음
+  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion":2020,
     "sourceType": "module",
