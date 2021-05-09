@@ -8,6 +8,7 @@ import PostImages from './PostImages';
 import CommentForm from './CommentForm';
 import PostCardContent from './PostCardContent';
 import { REMOVE_POST_REQUEST } from '../reducers/post';
+import FollowButton from './FollowButton';
 
 const PostCard = ({ post }) => {
   const dispatch = useDispatch();
@@ -57,6 +58,7 @@ const PostCard = ({ post }) => {
             <EllipsisOutlined />
           </Popover>
         ]}
+        extra={id && <FollowButton post={post} />} // 로그인 한 경우에만 팔로우버튼 보임
       >
         <Card.Meta 
           avatar={<Avatar>{post.User.nickname[0]}</Avatar>}
